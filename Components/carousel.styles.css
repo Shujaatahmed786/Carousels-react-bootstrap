@@ -1,0 +1,60 @@
+/* carouselStyles.css */
+
+/* Basic styles for the carousel */
+.slider-container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Style for carousel images */
+.carousel-item img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Style for text description */
+.carousel-item p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 767px) {
+    /* For small screens */
+    .slider-container .row {
+        flex-direction: column;
+    }
+
+    .slider-container .col {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* For medium screens */
+    .slider-container .col {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    /* For large screens */
+    .slider-container .col {
+        width: 33.33%;
+    }
+}
+
+/* Keyframes for image fading effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in effect to carousel images */
+.carousel-item img {
+    animation: fadeIn 2s ease-in-out;
+}
